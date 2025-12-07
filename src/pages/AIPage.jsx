@@ -6,7 +6,7 @@ export default function AIPage() {
             <Helmet>
                 <title>AI導入支援 | 株式会社Skill Kraft</title>
                 <meta name="description" content="業務効率化のためのAI導入支援。自社専用アプリ開発やオペレーションの自動化で、20人分の業務を5人で回す体制を構築します。" />
-                <meta name="keywords" content="AI導入,業務効率化,AIアプリ開発,オートメーション,Skill Kraft" />
+                <meta name="keywords" content="AI導入,業務効率化,AIアプリ開発,オートメーション,Skill Kraft,SkillKraft,スキルクラフト" />
                 <meta property="og:title" content="AI導入支援 | 株式会社Skill Kraft" />
                 <meta property="og:description" content="業務効率化のためのAI導入支援。自社専用アプリ開発やオペレーションの自動化で、20人分の業務を5人で回す体制を構築します。" />
                 <meta property="og:url" content="https://skillkraft.xyz/ai" />

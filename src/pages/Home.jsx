@@ -9,7 +9,7 @@ export default function Home() {
             <Helmet>
                 <title>株式会社Skill Kraft | あなたのポテンシャルをこじ開ける</title>
                 <meta name="description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。福岡県遠賀郡。" />
-                <meta name="keywords" content="Skill Kraft,スキルクラフト,株式会社Skill Kraft,SNS運用,AI導入,副業コンサルティング,福岡,遠賀郡" />
+                <meta name="keywords" content="Skill Kraft,SkillKraft,スキルクラフト,株式会社Skill Kraft,SNS運用,AI導入,副業コンサルティング,福岡,遠賀郡" />
                 <meta property="og:title" content="株式会社Skill Kraft | あなたのポテンシャルをこじ開ける" />
                 <meta property="og:description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。" />
                 <meta property="og:url" content="https://skillkraft.xyz/" />
@@ -24,7 +24,7 @@ export default function Home() {
                         "@context": "https://schema.org",
                         "@type": "Organization",
                         "name": "株式会社Skill Kraft",
-                        "alternateName": "Skill Kraft Inc.",
+                        "alternateName": ["Skill Kraft Inc.", "Skill Kraft", "SkillKraft", "スキルクラフト"],
                         "url": "https://skillkraft.xyz",
                         "logo": "https://skillkraft.xyz/vite.svg",
                         "description": "株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。",

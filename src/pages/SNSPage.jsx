@@ -6,7 +6,7 @@ export default function SNSPage() {
             <Helmet>
                 <title>SNS×AIコンサルティング | 株式会社Skill Kraft</title>
                 <meta name="description" content="AIを活用した効率的なSNS運用で、フォロワー数ではなく「利益」を最大化します。Instagram、YouTube、TikTokに対応。全額返金保証あり。" />
-                <meta name="keywords" content="SNS運用,AIコンサルティング,Instagram運用,YouTube運用,TikTok運用,Skill Kraft" />
+                <meta name="keywords" content="SNS運用,AIコンサルティング,Instagram運用,YouTube運用,TikTok運用,Skill Kraft,SkillKraft,スキルクラフト" />
                 <meta property="og:title" content="SNS×AIコンサルティング | 株式会社Skill Kraft" />
                 <meta property="og:description" content="AIを活用した効率的なSNS運用で、フォロワー数ではなく「利益」を最大化します。Instagram、YouTube、TikTokに対応。全額返金保証あり。" />
                 <meta property="og:url" content="https://skillkraft.xyz/sns" />
