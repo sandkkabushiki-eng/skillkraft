@@ -4,18 +4,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install --legacy-peer-deps",
   "framework": "vite",
-  "redirects": [
-    {
-      "source": "https://www.skillkraft.xyz/:path*",
-      "destination": "https://skillkraft.xyz/:path*",
-      "permanent": true
-    },
-    {
-      "source": "https://www.skillkraft.xyz",
-      "destination": "https://skillkraft.xyz",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
