@@ -4,8 +4,14 @@ export default function SideJobPage() {
     return (
         <div className="detail-page container">
             <Helmet>
-                <title>副業コンサルティング | (株)Skill Kraft</title>
+                <title>副業コンサルティング | 株式会社Skill Kraft</title>
                 <meta name="description" content="個人の力を「資産」に変える副業コンサルティング。SNSを活用した収益化スキルをマンツーマンで指導し、経済的自立をサポートします。" />
+                <meta name="keywords" content="副業コンサルティング,副業,収益化,SNS副業,Skill Kraft" />
+                <meta property="og:title" content="副業コンサルティング | 株式会社Skill Kraft" />
+                <meta property="og:description" content="個人の力を「資産」に変える副業コンサルティング。SNSを活用した収益化スキルをマンツーマンで指導し、経済的自立をサポートします。" />
+                <meta property="og:url" content="https://skillkraft.xyz/side-job" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://skillkraft.xyz/side-job" />
             </Helmet>
             <div className="detail-hero">
                 <h1 className="detail-title">Side Job Consulting</h1>

@@ -7,8 +7,46 @@ export default function Home() {
     return (
         <div className="home-container">
             <Helmet>
-                <title>(株)Skill Kraft | あなたのポテンシャルをこじあげる</title>
-                <meta name="description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。" />
+                <title>株式会社Skill Kraft | あなたのポテンシャルをこじ開ける</title>
+                <meta name="description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。福岡県遠賀郡。" />
+                <meta name="keywords" content="Skill Kraft,スキルクラフト,株式会社Skill Kraft,SNS運用,AI導入,副業コンサルティング,福岡,遠賀郡" />
+                <meta property="og:title" content="株式会社Skill Kraft | あなたのポテンシャルをこじ開ける" />
+                <meta property="og:description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。" />
+                <meta property="og:url" content="https://skillkraft.xyz/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="株式会社Skill Kraft" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="株式会社Skill Kraft | あなたのポテンシャルをこじ開ける" />
+                <meta name="twitter:description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。" />
+                <link rel="canonical" href="https://skillkraft.xyz/" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "株式会社Skill Kraft",
+                        "alternateName": "Skill Kraft Inc.",
+                        "url": "https://skillkraft.xyz",
+                        "logo": "https://skillkraft.xyz/vite.svg",
+                        "description": "株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressRegion": "福岡県",
+                            "addressLocality": "遠賀郡",
+                            "streetAddress": "下二東15-17"
+                        },
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "email": "sandkkabushiki@gmail.com",
+                            "contactType": "customer service"
+                        },
+                        "founder": {
+                            "@type": "Person",
+                            "name": "中村 昇継"
+                        },
+                        "foundingDate": "2025-09-25",
+                        "sameAs": []
+                    })}
+                </script>
             </Helmet>
 
             {/* Hero Section */}
