@@ -6,13 +6,13 @@
   "framework": "vite",
   "redirects": [
     {
-      "source": "https://skillkraft.xyz/:path*",
-      "destination": "https://www.skillkraft.xyz/:path*",
+      "source": "https://www.skillkraft.xyz/:path*",
+      "destination": "https://skillkraft.xyz/:path*",
       "permanent": true
     },
     {
-      "source": "https://skillkraft.xyz",
-      "destination": "https://www.skillkraft.xyz",
+      "source": "https://www.skillkraft.xyz",
+      "destination": "https://skillkraft.xyz",
       "permanent": true
     }
   ],
