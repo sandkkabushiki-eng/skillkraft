@@ -1,0 +1,102 @@
+import ServiceCard from '../components/ServiceCard'
+import BackgroundKey from '../components/BackgroundKey'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+
+export default function Home() {
+    return (
+        <div className="home-container">
+            <Helmet>
+                <title>(株)Skill Kraft | あなたのポテンシャルをこじあげる</title>
+                <meta name="description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。" />
+            </Helmet>
+
+            {/* Hero Section */}
+            <section className="hero">
+                <BackgroundKey />
+                <div className="hero-content">
+                    <h1 className="hero-title">
+                        <div className="vertical-text fade-in-delay-1">あなたの</div>
+                        <div className="vertical-text fade-in-delay-2">ポテンシャルを</div>
+                        <div className="hero-highlight fade-in-delay-3">こじ開ける。</div>
+                    </h1>
+                    <p className="hero-subtitle">Skill Kraft Inc.</p>
+                </div>
+            </section>
+
+            {/* Services Section */}
+            <section id="services" className="section container">
+                <h2 className="section-title">事業内容</h2>
+                <div className="services-grid">
+                    <Link to="/sns">
+                        <ServiceCard
+                            title="SNS × AIコンサルティング"
+                            badge="拡散"
+                            description="Instagram、X、TikTokなどの運用代行。AIを活用した効率的な戦略立案からコンテンツ制作まで一貫してサポート。クリックして詳細を見る"
+                        />
+                    </Link>
+                    <Link to="/ai">
+                        <ServiceCard
+                            title="AI導入支援"
+                            badge="革新"
+                            description="業務効率化のためのAI導入、独自アプリ開発。最新テクノロジーでビジネスを加速。クリックして詳細を見る"
+                        />
+                    </Link>
+                    <Link to="/side-job">
+                        <ServiceCard
+                            title="副業コンサルティング"
+                            badge="飛躍"
+                            description="個人のスキルを活かした副業立ち上げから収益化までマンツーマンサポート。クリックして詳細を見る"
+                        />
+                    </Link>
+                </div>
+            </section>
+
+            {/* Contact Section - Moved Up */}
+            <section id="contact" className="section bg-gray">
+                <div className="container text-center">
+                    <h2 className="section-title">お問い合わせ</h2>
+                    <p className="contact-text">
+                        お仕事のご依頼・ご相談は、以下のフォームよりお気軽にご連絡ください。<br />
+                        担当者より24時間以内に折り返しご連絡いたします。
+                    </p>
+                    <a href="https://docs.google.com/forms/d/1_94L8NqWVh4SZxVzKXt2Yh4dsBaS6ZBAqSJ9lvoYfhk/viewform" target="_blank" rel="noopener noreferrer" className="contact-button-premium">
+                        お問い合わせフォームへ進む
+                    </a>
+                    <p className="contact-note">※ Googleフォームへ移動します</p>
+                </div>
+            </section>
+
+            {/* Company Section - Moved Down */}
+            <section id="company" className="section bg-white text-center">
+                <div className="container">
+                    <h2 className="section-title">会社概要</h2>
+                    <div className="company-info">
+                        <dl className="company-list">
+                            <div className="company-item">
+                                <dt>会社名</dt>
+                                <dd>(株)Skill Kraft</dd>
+                            </div>
+                            <div className="company-item">
+                                <dt>代表者</dt>
+                                <dd>中村 昇継</dd>
+                            </div>
+                            <div className="company-item">
+                                <dt>創業</dt>
+                                <dd>2025年9月25日</dd>
+                            </div>
+                            <div className="company-item">
+                                <dt>所在地</dt>
+                                <dd>福岡県遠賀郡下二東15-17</dd>
+                            </div>
+                            <div className="company-item">
+                                <dt>連絡先</dt>
+                                <dd>sandkkabushiki@gmail.com</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+        </div>
+    )
+}

@@ -1,0 +1,29 @@
+/* Add Canvas Styles to index.css */
+/* Canvas container */
+.canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Behind content */
+    opacity: 0.6;
+    /* Subtle */
+    pointer-events: none;
+    /* Let clicks pass through */
+}
+
+/* Ensure Hero has relative positioning so z-index works */
+.hero {
+    /* Existing styles... */
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    /* Remove solid background to see canvas */
+}
+
+/* We previously had a background gradient on .hero, let's make it more transparent or remove it 
+   so the 3D key is visible. 
+   I will override the .hero background in the main css file via multi-replace soon.
+*/

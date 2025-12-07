@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Yuji+Syuku&display=swap');
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1c1c1c;
+  /* Sumi Ink */
+  --color-accent: #333333;
+  /* Monochrome accent */
+  --color-gray: #f5f5f5;
+
+  --font-heading: 'Yuji Syuku', serif;
+  --font-body: 'Shippori Mincho', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  /* Subtle Noise/Washi Texture effect */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 100px 0;
+  /* More breathing room */
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+  /* Removed absolute positioning hacks to fix off-center issue */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin: 10px auto 0;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+/* Header */
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  /* More transparent */
+  backdrop-filter: blur(12px);
+  /* Glassmorphism */
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 30px;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  /* Start hidden */
+  animation: bgFadeIn 2s ease-out forwards;
+  animation-delay: 2.5s;
+  /* Appear after text */
+}
+
+@keyframes bgFadeIn {
+  to {
+    opacity: 0.8;
+  }
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  /* Row for vertical columns */
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Highlighted last line - Vertical */
+.hero-highlight {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.5rem;
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-top: 0;
+}
+
+@keyframes impact-pulse {
+  0% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+
+  50% {
+    transform: scale(1.05);
+    filter: blur(0.5px);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+
+/* Staggered Fade In for Hero Text */
+.vertical-text,
+.hero-highlight {
+  opacity: 0;
+  animation: textFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0.5s;
+}
+
+.fade-in-delay-2 {
+  animation-delay: 1.2s;
+}
+
+.fade-in-delay-3 {
+  animation-delay: 2.0s;
+  /* Add extra impact for the final line */
+  animation-duration: 1.5s;
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+
+/* Vertical text standard */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.5rem;
+}
+
+.hero-subtitle {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: #888;
+  margin-top: 2rem;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Contact & Footer */
+.bg-gray {
+  background-color: var(--color-gray);
+}
+
+.contact-text {
+  margin-bottom: 40px;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 15px 50px;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  font-family: var(--font-brush);
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+.contact-button:hover {
+  background-color: var(--color-text);
+  color: #fff;
+}
+
+/* Premium Contact Button (Wa-Modern) */
+.contact-button-premium {
+  display: inline-block;
+  position: relative;
+  padding: 20px 60px;
+  background-color: var(--color-text);
+  /* Sumi Ink */
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid var(--color-text);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s;
+}
+
+.contact-button-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background-color: #333;
+  /* Slightly lighter sumi */
+}
+
+.contact-button-premium:hover::before {
+  left: 100%;
+}
+
+.contact-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 15px;
+  font-family: var(--font-body);
+}
+
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  border-top: 1px solid #eaeaea;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    gap: 2rem;
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .nav {
+    margin-top: 15px;
+  }
+
+  .nav a {
+    margin: 0 10px;
+  }
+}
+
+/* Detail Page Styles */
+.detail-page {
+  padding-top: 150px;
+  /* Increased from 100px to clear header safely */
+  padding-bottom: 80px;
+  min-height: 100vh;
+  /* Ensure page takes full height */
+  overflow-y: auto;
+  /* Force scrollability if restricted */
+}
+
+.detail-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure no global overflow hides content */
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+}
+
+/* Company Styles */
+.company-info {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.company-list {
+  text-align: left;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  /* Center the list */
+  font-family: var(--font-body);
+}
+
+.company-item {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.company-item dt {
+  width: 120px;
+  font-weight: bold;
+  color: #555;
+}
+
+.company-item dd {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .company-item {
+    flex-direction: column;
+  }
+}
+
+.highlight-box {
+  border: 4px double var(--color-text);
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.stats-list li {
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 10px;
+}
+
+.stats-list strong {
+  font-size: 1.8rem;
+  /* margin-left: 10px; */
+  /* Remove color logic, keep refined black */
+}
+
+.text-red {
+  color: #b91c1c;
+  /* Keep Red ONLY for the Refund Guarantee text if desired? User disliked red earlier.
+                      User said "文字は動かさずに色も黒でいいよ" for the Hero.
+                      I will stick to Black for consistency unless specifie otherwise.
+                   */
+  color: var(--color-text);
+}
+
+.strong-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 80px;
+}
