@@ -7,9 +7,9 @@ export default function Home() {
     return (
         <div className="home-container">
             <Helmet>
-                <title>株式会社Skill Kraft | あなたのポテンシャルをこじ開ける</title>
-                <meta name="description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。福岡県遠賀郡。" />
-                <meta name="keywords" content="Skill Kraft,SkillKraft,スキルクラフト,株式会社Skill Kraft,SNS運用,AI導入,副業コンサルティング,福岡,遠賀郡" />
+                <title>スキルクラフト | 株式会社Skill Kraft | あなたのポテンシャルをこじ開ける</title>
+                <meta name="description" content="スキルクラフト（株式会社Skill Kraft）の公式ホームページ。SNSマーケティング、AI導入支援、AI副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。福岡県遠賀郡。" />
+                <meta name="keywords" content="スキルクラフト,Skill Kraft,SkillKraft,株式会社Skill Kraft,SNSマーケティング,SNS運用,AI導入,AI副業,副業コンサルティング,福岡,遠賀郡" />
                 <meta property="og:title" content="株式会社Skill Kraft | あなたのポテンシャルをこじ開ける" />
                 <meta property="og:description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。" />
                 <meta property="og:url" content="https://skillkraft.xyz/" />
@@ -27,7 +27,7 @@ export default function Home() {
                         "alternateName": ["Skill Kraft Inc.", "Skill Kraft", "SkillKraft", "スキルクラフト"],
                         "url": "https://skillkraft.xyz",
                         "logo": "https://skillkraft.xyz/vite.svg",
-                        "description": "株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。",
+                        "description": "スキルクラフト（株式会社Skill Kraft）の公式ホームページ。SNSマーケティング、AI導入支援、AI副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。",
                         "address": {
                             "@type": "PostalAddress",
                             "addressRegion": "福岡県",
@@ -64,7 +64,7 @@ export default function Home() {
 
             {/* Services Section */}
             <section id="services" className="section container">
-                <h2 className="section-title">事業内容</h2>
+                    <h2 className="section-title">事業内容 | スキルクラフト</h2>
                 <div className="services-grid">
                     <Link to="/sns">
                         <ServiceCard

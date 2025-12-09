@@ -4,9 +4,9 @@ export default function AIPage() {
     return (
         <div className="detail-page container">
             <Helmet>
-                <title>AI導入支援 | 株式会社Skill Kraft</title>
-                <meta name="description" content="業務効率化のためのAI導入支援。自社専用アプリ開発やオペレーションの自動化で、20人分の業務を5人で回す体制を構築します。" />
-                <meta name="keywords" content="AI導入,業務効率化,AIアプリ開発,オートメーション,Skill Kraft,SkillKraft,スキルクラフト" />
+                <title>AI導入支援 | AI副業 | スキルクラフト</title>
+                <meta name="description" content="スキルクラフトのAI導入支援サービス。業務効率化のためのAI導入、AI副業支援。自社専用アプリ開発やオペレーションの自動化で、20人分の業務を5人で回す体制を構築します。" />
+                <meta name="keywords" content="AI導入,AI副業,業務効率化,AIアプリ開発,オートメーション,Skill Kraft,SkillKraft,スキルクラフト" />
                 <meta property="og:title" content="AI導入支援 | 株式会社Skill Kraft" />
                 <meta property="og:description" content="業務効率化のためのAI導入支援。自社専用アプリ開発やオペレーションの自動化で、20人分の業務を5人で回す体制を構築します。" />
                 <meta property="og:url" content="https://skillkraft.xyz/ai" />
@@ -14,8 +14,8 @@ export default function AIPage() {
                 <link rel="canonical" href="https://skillkraft.xyz/ai" />
             </Helmet>
             <div className="detail-hero">
-                <h1 className="detail-title">AI導入支援</h1>
-                <p className="detail-subtitle">業務効率化・独自アプリ開発</p>
+                <h1 className="detail-title">AI導入支援 | スキルクラフト</h1>
+                <p className="detail-subtitle">業務効率化・独自アプリ開発・AI副業支援</p>
             </div>
 
             <section className="detail-section">

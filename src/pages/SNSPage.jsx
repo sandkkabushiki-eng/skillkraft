@@ -4,9 +4,9 @@ export default function SNSPage() {
     return (
         <div className="detail-page container">
             <Helmet>
-                <title>SNS×AIコンサルティング | 株式会社Skill Kraft</title>
-                <meta name="description" content="AIを活用した効率的なSNS運用で、フォロワー数ではなく「利益」を最大化します。Instagram、YouTube、TikTokに対応。全額返金保証あり。" />
-                <meta name="keywords" content="SNS運用,AIコンサルティング,Instagram運用,YouTube運用,TikTok運用,Skill Kraft,SkillKraft,スキルクラフト" />
+                <title>SNSマーケティング | SNS×AIコンサルティング | スキルクラフト</title>
+                <meta name="description" content="スキルクラフトのSNSマーケティングサービス。AIを活用した効率的なSNS運用で、フォロワー数ではなく「利益」を最大化します。Instagram、YouTube、TikTokに対応。全額返金保証あり。" />
+                <meta name="keywords" content="SNSマーケティング,SNS運用,AIコンサルティング,Instagram運用,YouTube運用,TikTok運用,Skill Kraft,SkillKraft,スキルクラフト" />
                 <meta property="og:title" content="SNS×AIコンサルティング | 株式会社Skill Kraft" />
                 <meta property="og:description" content="AIを活用した効率的なSNS運用で、フォロワー数ではなく「利益」を最大化します。Instagram、YouTube、TikTokに対応。全額返金保証あり。" />
                 <meta property="og:url" content="https://skillkraft.xyz/sns" />
@@ -14,16 +14,16 @@ export default function SNSPage() {
                 <link rel="canonical" href="https://skillkraft.xyz/sns" />
             </Helmet>
             <div className="detail-hero">
-                <h1 className="detail-title">SNS × AI Consulting</h1>
-                <p className="detail-subtitle">AI活用型・売上特化SNS運用</p>
+                <h1 className="detail-title">SNSマーケティング × AI Consulting</h1>
+                <p className="detail-subtitle">AI活用型・売上特化SNS運用 | スキルクラフト</p>
             </div>
 
             <section className="detail-section">
                 <img src="/images/sns.png" alt="SNS × AI Analysis" className="detail-image" />
-                <h2 className="detail-heading">フォロワー数 ≠ 売上</h2>
+                <h2 className="detail-heading">SNSマーケティングでフォロワー数 ≠ 売上</h2>
                 <p>
                     「フォロワーが増えても売上が上がらなければ意味がない」<br />
-                    私たちは単なる「バズ」を目的とせず、最終的な<strong>「利益」</strong>を生み出す設計を徹底します。<br />
+                    スキルクラフトは単なる「バズ」を目的とせず、最終的な<strong>「利益」</strong>を生み出すSNSマーケティング設計を徹底します。<br />
                     コンセプト設計から商品導入、販売動線まで一貫してコンサルティングを行います。
                 </p>
             </section>
