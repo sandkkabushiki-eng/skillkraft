@@ -355,23 +355,162 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-    gap: 2rem;
+  .container {
+    padding: 0 15px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
   }
 
   .header {
-    flex-direction: column;
     height: auto;
-    padding: 15px;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 1.2rem;
   }
 
   .nav {
-    margin-top: 15px;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
   .nav a {
-    margin: 0 10px;
+    margin: 0;
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+
+  .hero {
+    height: 70vh;
+    min-height: 500px;
+    padding: 80px 20px 40px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vertical-text {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-highlight {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-desc {
+    font-size: 0.95rem;
+  }
+
+  .contact-button-premium {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .detail-page {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .detail-title {
+    font-size: 2rem;
+  }
+
+  .detail-subtitle {
+    font-size: 1rem;
+  }
+
+  .detail-heading {
+    font-size: 1.5rem;
+  }
+
+  .highlight-box {
+    padding: 20px;
+  }
+
+  .stats-list {
+    font-size: 1rem;
+  }
+
+  .stats-list strong {
+    font-size: 1.4rem;
+  }
+
+  .company-item {
+    flex-direction: column;
+    padding: 12px 0;
+  }
+
+  .company-item dt {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .vertical-text {
+    font-size: 1.2rem;
+  }
+
+  .hero-highlight {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-button-premium {
+    padding: 12px 30px;
+    font-size: 1rem;
   }
 }
 
@@ -437,11 +576,6 @@ body {
   flex: 1;
 }
 
-@media (max-width: 768px) {
-  .company-item {
-    flex-direction: column;
-  }
-}
 
 .highlight-box {
   border: 4px double var(--color-text);
