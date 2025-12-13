@@ -1,9 +1,9 @@
 /* Reset App.css */
 .service-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  /* Slightly sharper corners for modern feel */
+  border-radius: 20px;
+  /* Rounded corners */
   padding: 40px 30px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
@@ -12,19 +12,18 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-  /* Very subtle base shadow */
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-  /* Soft elevated shadow */
+  box-shadow: 0 15px 30px rgba(82, 182, 208, 0.15);
+  /* Blue shadow */
   background: #ffffff;
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--color-secondary);
 }
 
 .card-badge {
-  font-family: var(--font-brush);
+  font-family: var(--font-heading);
   font-size: 1.2rem;
   color: var(--color-accent);
   margin-bottom: 20px;
@@ -33,14 +32,18 @@
   top: 20px;
   right: 20px;
   letter-spacing: 0.2rem;
+  font-weight: bold;
 }
 
 .card-title {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 3px solid var(--color-highlight);
+  /* Yellow accent */
   padding-bottom: 15px;
   display: inline-block;
+  color: var(--color-text);
+  font-weight: bold;
 }
 
 .card-desc {

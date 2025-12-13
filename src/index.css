@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Yuji+Syuku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
 
 :root {
-  --color-bg: #ffffff;
-  --color-text: #1c1c1c;
-  /* Sumi Ink */
-  --color-accent: #333333;
-  /* Monochrome accent */
+  --color-bg: #fdfdfd;
+  --color-text: #555555;
+  /* Logo Grey */
+  --color-accent: #E65A4C;
+  /* Logo Red */
+  --color-secondary: #52B6D0;
+  /* Logo Blue */
+  --color-highlight: #F2D94E;
+  /* Logo Yellow */
   --color-gray: #f5f5f5;
 
-  --font-heading: 'Yuji Syuku', serif;
-  --font-body: 'Shippori Mincho', serif;
+  --font-heading: 'Zen Maru Gothic', sans-serif;
+  --font-body: 'Zen Maru Gothic', sans-serif;
 }
 
 * {
@@ -35,18 +39,19 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.4;
+  color: var(--color-accent);
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease;
 }
 
 a:hover {
-  opacity: 0.7;
+  color: var(--color-secondary);
 }
 
 .container {
@@ -89,9 +94,10 @@ a:hover {
   content: '';
   display: block;
   width: 60px;
-  height: 2px;
-  background-color: var(--color-accent);
+  height: 4px;
+  background-color: var(--color-highlight);
   margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 /* Utilities */
@@ -286,34 +292,37 @@ a:hover {
 .contact-button {
   display: inline-block;
   padding: 15px 50px;
-  border: 1px solid var(--color-text);
-  color: var(--color-text);
-  font-family: var(--font-brush);
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  font-family: var(--font-heading);
   font-size: 1.2rem;
   transition: all 0.3s;
+  border-radius: 50px;
+  font-weight: bold;
 }
 
 .contact-button:hover {
-  background-color: var(--color-text);
+  background-color: var(--color-secondary);
   color: #fff;
 }
 
-/* Premium Contact Button (Wa-Modern) */
+/* Premium Contact Button (Rounded Pop) */
 .contact-button-premium {
   display: inline-block;
   position: relative;
   padding: 20px 60px;
-  background-color: var(--color-text);
-  /* Sumi Ink */
+  background-color: var(--color-accent);
   color: #fff;
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-decoration: none;
   overflow: hidden;
   transition: all 0.4s ease;
-  border: 1px solid var(--color-text);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(230, 90, 76, 0.3);
+  font-weight: bold;
 }
 
 .contact-button-premium::before {
@@ -323,15 +332,14 @@ a:hover {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: all 0.6s;
 }
 
 .contact-button-premium:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  background-color: #333;
-  /* Slightly lighter sumi */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(230, 90, 76, 0.5);
+  background-color: #ff6b5b;
 }
 
 .contact-button-premium:hover::before {
@@ -578,10 +586,12 @@ body {
 
 
 .highlight-box {
-  border: 4px double var(--color-text);
+  border: 4px solid var(--color-highlight);
   padding: 40px;
   text-align: center;
   background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(242, 217, 78, 0.2);
 }
 
 .stats-list {
