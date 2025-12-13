@@ -12,14 +12,14 @@ export default function Home() {
                 <meta name="keywords" content="AI導入,AI導入支援,AI活用,スキルクラフト,Skill Kraft,SNSマーケティング,DX,業務効率化" />
                 <meta property="og:title" content="スキルクラフト | AI導入支援のプロフェッショナル" />
                 <meta property="og:description" content="AI×SNSでビジネスを加速。株式会社Skill Kraftの公式ホームページです。" />
-                <meta property="og:image" content="https://skillkraft.xyz/アイコン.GIF" />
+                <meta property="og:image" content="https://skillkraft.xyz/アイコン.gif" />
                 <meta property="og:url" content="https://skillkraft.xyz/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="株式会社Skill Kraft" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="スキルクラフト | AI導入支援のプロフェッショナル" />
                 <meta name="twitter:description" content="AI×SNSでビジネスを加速。株式会社Skill Kraftの公式ホームページです。" />
-                <meta name="twitter:image" content="https://skillkraft.xyz/アイコン.GIF" />
+                <meta name="twitter:image" content="https://skillkraft.xyz/アイコン.gif" />
                 <link rel="canonical" href="https://skillkraft.xyz/" />
                 <script type="application/ld+json">
                     {JSON.stringify({
