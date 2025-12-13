@@ -2,8 +2,8 @@
 .service-card {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 20px;
-  /* Rounded corners */
+  border-radius: 16px;
+  /* Slightly tighter radius for tech feel */
   padding: 40px 30px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
@@ -16,8 +16,8 @@
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(82, 182, 208, 0.15);
-  /* Blue shadow */
+  box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15);
+  /* Tech Blue shadow */
   background: #ffffff;
   border-color: var(--color-secondary);
 }

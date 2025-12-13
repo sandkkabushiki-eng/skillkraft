@@ -1,19 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
 :root {
-  --color-bg: #fdfdfd;
-  --color-text: #555555;
-  /* Logo Grey */
+  --color-bg: #f8f9fa;
+  /* Slightly cooler white */
+  --color-text: #333333;
   --color-accent: #E65A4C;
-  /* Logo Red */
-  --color-secondary: #52B6D0;
-  /* Logo Blue */
+  /* Logo Red - Keep for warmth */
+  --color-secondary: #007AFF;
+  /* Tech Blue - Sharper than logo blue for AI feel */
   --color-highlight: #F2D94E;
   /* Logo Yellow */
+  --color-dark: #1a1a2e;
+  /* Deep dark blue/black for contrast */
   --color-gray: #f5f5f5;
 
-  --font-heading: 'Zen Maru Gothic', sans-serif;
+  --font-heading: 'Noto Sans JP', sans-serif;
+  /* More solid, tech feel */
   --font-body: 'Zen Maru Gothic', sans-serif;
+  /* Keep rounded for friendly body text */
 }
 
 * {
@@ -306,12 +310,12 @@ a:hover {
   color: #fff;
 }
 
-/* Premium Contact Button (Rounded Pop) */
 .contact-button-premium {
   display: inline-block;
   position: relative;
   padding: 20px 60px;
-  background-color: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-dark));
+  /* Tech gradient */
   color: #fff;
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -321,8 +325,8 @@ a:hover {
   transition: all 0.4s ease;
   border: none;
   border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(230, 90, 76, 0.3);
-  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+  font-weight: 900;
 }
 
 .contact-button-premium::before {
@@ -332,14 +336,14 @@ a:hover {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transition: all 0.6s;
 }
 
 .contact-button-premium:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(230, 90, 76, 0.5);
-  background-color: #ff6b5b;
+  box-shadow: 0 8px 25px rgba(0, 122, 255, 0.5);
+  background: linear-gradient(135deg, var(--color-secondary), #0056b3);
 }
 
 .contact-button-premium:hover::before {

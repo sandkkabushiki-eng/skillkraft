@@ -7,17 +7,19 @@ export default function Home() {
     return (
         <div className="home-container">
             <Helmet>
-                <title>スキルクラフト | 株式会社Skill Kraft | あなたのポテンシャルをこじ開ける</title>
-                <meta name="description" content="スキルクラフト（株式会社Skill Kraft）の公式ホームページ。SNSマーケティング、AI導入支援、AI副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。福岡県遠賀郡。" />
-                <meta name="keywords" content="スキルクラフト,Skill Kraft,SkillKraft,株式会社Skill Kraft,SNSマーケティング,SNS運用,AI導入,AI副業,副業コンサルティング,福岡,遠賀郡" />
-                <meta property="og:title" content="株式会社Skill Kraft | あなたのポテンシャルをこじ開ける" />
-                <meta property="og:description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。" />
+                <title>スキルクラフト | 株式会社Skill Kraft | AI導入支援のプロフェッショナル</title>
+                <meta name="description" content="スキルクラフト（株式会社Skill Kraft）はAI導入支援のプロフェッショナル。SNSマーケティング×AI、業務効率化、AI副業支援でビジネスを加速させます。" />
+                <meta name="keywords" content="AI導入,AI導入支援,AI活用,スキルクラフト,Skill Kraft,SNSマーケティング,DX,業務効率化" />
+                <meta property="og:title" content="スキルクラフト | AI導入支援のプロフェッショナル" />
+                <meta property="og:description" content="AI×SNSでビジネスを加速。株式会社Skill Kraftの公式ホームページです。" />
+                <meta property="og:image" content="https://skillkraft.xyz/アイコン.GIF" />
                 <meta property="og:url" content="https://skillkraft.xyz/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="株式会社Skill Kraft" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="株式会社Skill Kraft | あなたのポテンシャルをこじ開ける" />
-                <meta name="twitter:description" content="株式会社Skill Kraftの公式ホームページ。SNS×AI運用、AI導入支援、副業コンサルティングを通じて、個人と企業のポテンシャルを解放します。" />
+                <meta name="twitter:title" content="スキルクラフト | AI導入支援のプロフェッショナル" />
+                <meta name="twitter:description" content="AI×SNSでビジネスを加速。株式会社Skill Kraftの公式ホームページです。" />
+                <meta name="twitter:image" content="https://skillkraft.xyz/アイコン.GIF" />
                 <link rel="canonical" href="https://skillkraft.xyz/" />
                 <script type="application/ld+json">
                     {JSON.stringify({
