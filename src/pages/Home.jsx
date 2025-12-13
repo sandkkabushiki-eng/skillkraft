@@ -1,5 +1,5 @@
 import ServiceCard from '../components/ServiceCard'
-import BackgroundKey from '../components/BackgroundKey'
+import SpaceBackground from '../components/SpaceBackground'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 
@@ -7,8 +7,8 @@ export default function Home() {
     return (
         <div className="home-container">
             <Helmet>
-                <title>スキルクラフト | 株式会社Skill Kraft | AI導入支援のプロフェッショナル</title>
-                <meta name="description" content="スキルクラフト（株式会社Skill Kraft）はAI導入支援のプロフェッショナル。SNSマーケティング×AI、業務効率化、AI副業支援でビジネスを加速させます。" />
+                <title>スキルクラフト | 秒で仕事を終わらせる | AI導入支援</title>
+                <meta name="description" content="秒で仕事を終わらせる。スキルクラフトはAI導入とSNSマーケティングで、あなたのビジネスを劇的に加速させます。" />
                 <meta name="keywords" content="AI導入,AI導入支援,AI活用,スキルクラフト,Skill Kraft,SNSマーケティング,DX,業務効率化" />
                 <meta property="og:title" content="スキルクラフト | AI導入支援のプロフェッショナル" />
                 <meta property="og:description" content="AI×SNSでビジネスを加速。株式会社Skill Kraftの公式ホームページです。" />
@@ -53,12 +53,12 @@ export default function Home() {
 
             {/* Hero Section */}
             <section className="hero">
-                <BackgroundKey />
+                <SpaceBackground />
                 <div className="hero-content">
                     <h1 className="hero-title">
-                        <div className="vertical-text fade-in-delay-1">あなたの</div>
-                        <div className="vertical-text fade-in-delay-2">ポテンシャルを</div>
-                        <div className="hero-highlight fade-in-delay-3">こじ開ける。</div>
+                        <div className="hero-highlight fade-in-delay-1">秒で</div>
+                        <div className="hero-highlight fade-in-delay-2">仕事を</div>
+                        <div className="hero-highlight fade-in-delay-3" style={{ color: 'var(--color-secondary)' }}>終わらせる</div>
                     </h1>
                     <p className="hero-subtitle">Skill Kraft Inc.</p>
                 </div>

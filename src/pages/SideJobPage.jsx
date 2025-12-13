@@ -4,8 +4,8 @@ export default function SideJobPage() {
     return (
         <div className="detail-page container">
             <Helmet>
-                <title>AI副業 | 副業コンサルティング | スキルクラフト</title>
-                <meta name="description" content="スキルクラフトのAI副業コンサルティング。個人の力を「資産」に変える副業支援。AIとSNSを活用した収益化スキルをマンツーマンで指導し、経済的自立をサポートします。" />
+                <title>AI副業 | 秒で仕事を終わらせる | スキルクラフト</title>
+                <meta name="description" content="スキルクラフトのAI副業支援。AIを活用して作業時間を短縮し、秒で収益を生み出す仕組みを指導します。" />
                 <meta name="keywords" content="AI副業,副業コンサルティング,副業,収益化,SNS副業,AI副業支援,Skill Kraft,SkillKraft,スキルクラフト" />
                 <meta property="og:title" content="副業コンサルティング | 株式会社Skill Kraft" />
                 <meta property="og:description" content="個人の力を「資産」に変える副業コンサルティング。SNSを活用した収益化スキルをマンツーマンで指導し、経済的自立をサポートします。" />

@@ -4,8 +4,8 @@ export default function SNSPage() {
     return (
         <div className="detail-page container">
             <Helmet>
-                <title>SNSマーケティング | SNS×AIコンサルティング | スキルクラフト</title>
-                <meta name="description" content="スキルクラフトのSNSマーケティングサービス。AIを活用した効率的なSNS運用で、フォロワー数ではなく「利益」を最大化します。Instagram、YouTube、TikTokに対応。全額返金保証あり。" />
+                <title>SNSマーケティング | 秒で仕事を終わらせる | スキルクラフト</title>
+                <meta name="description" content="スキルクラフトのSNSマーケティング。AI×SNSで集客を自動化し、秒で仕事を終わらせる仕組みを構築します。" />
                 <meta name="keywords" content="SNSマーケティング,SNS運用,AIコンサルティング,Instagram運用,YouTube運用,TikTok運用,Skill Kraft,SkillKraft,スキルクラフト" />
                 <meta property="og:title" content="SNS×AIコンサルティング | 株式会社Skill Kraft" />
                 <meta property="og:description" content="AIを活用した効率的なSNS運用で、フォロワー数ではなく「利益」を最大化します。Instagram、YouTube、TikTokに対応。全額返金保証あり。" />

@@ -1,9 +1,10 @@
 /* Reset App.css */
 .service-card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(26, 26, 46, 0.8);
+  /* Glass dark */
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  /* Neon border */
   border-radius: 16px;
-  /* Slightly tighter radius for tech feel */
   padding: 40px 30px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
@@ -11,15 +12,31 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15);
-  /* Tech Blue shadow */
-  background: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  /* Neon glow */
+  background: rgba(26, 26, 46, 1);
   border-color: var(--color-secondary);
+}
+
+.card-title {
+  color: #fff;
+  border-bottom: 3px solid var(--color-secondary);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.card-desc {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: returning;
 }
 
 .card-badge {
