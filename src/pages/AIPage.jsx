@@ -13,9 +13,21 @@ export default function AIPage() {
                 <meta property="og:type" content="website" />
                 <link rel="canonical" href="https://skillkraft.xyz/ai" />
             </Helmet>
-            <div className="detail-hero">
-                <h1 className="detail-title">AI導入支援 | スキルクラフト</h1>
-                <p className="detail-subtitle">業務効率化・独自アプリ開発・AI副業支援</p>
+            <div className="detail-hero" style={{ minHeight: '60vh', background: 'linear-gradient(135deg, #003366 0%, #001a33 100%)', color: 'white', position: 'relative', overflow: 'hidden' }}>
+                {/* AI Tech Background */}
+                <div className="sns-hero-pattern"></div>
+                <div className="sns-floating-icons">
+                    <div className="sns-icon-block">GPT</div>
+                    <div className="sns-icon-block">Claude</div>
+                    <div className="sns-icon-block">Gemini</div>
+                    <div className="sns-icon-block">Python</div>
+                    <div className="sns-icon-block">React</div>
+                </div>
+
+                <div className="container text-center" style={{ position: 'relative', zIndex: 1, paddingTop: '100px' }}>
+                    <h1 className="detail-title" style={{ color: 'white', marginBottom: '20px', fontSize: '3rem' }}>AI導入支援 | スキルクラフト</h1>
+                    <p className="detail-subtitle" style={{ color: '#e0e0e0', fontSize: '1.2rem' }}>業務効率化・独自アプリ開発・AI副業支援</p>
+                </div>
             </div>
 
             <section className="detail-section">
@@ -25,6 +37,31 @@ export default function AIPage() {
                     AI導入により、従業員20名規模の業務をわずか5名で回す体制を構築した事例がございます。<br />
                     人件費の削減だけでなく、意思決定のスピードアップと利益率の向上を実現します。
                 </p>
+            </section>
+
+            <section className="detail-section highlight-box">
+                <h2 className="detail-heading">SaaSの時代は終わり。</h2>
+                <h3 className="text-primary" style={{ fontSize: '1.4rem', marginBottom: '20px', textAlign: 'center' }}>これからは「会社に合った」業務改善アプリを。</h3>
+                <p>
+                    月額課金型の既存SaaSツールは便利ですが、「帯に短し襷に長し」で、本当に欲しい機能がなかったり、逆に機能が多すぎて使いこなせなかったりします。<br />
+                    Skill Kraftは、<strong>御社の業務フローに完全にフィットした独自のAIアプリ</strong>を開発・提供します。
+                </p>
+                <div style={{ marginTop: '30px', textAlign: 'center' }}>
+                    <p style={{ fontWeight: 'bold', marginBottom: '15px' }}>【近日公開】開発実績イメージ（YouTube）</p>
+                    <div className="youtube-placeholder" style={{ 
+                        background: '#000', 
+                        color: '#fff', 
+                        padding: '60px 20px', 
+                        borderRadius: '10px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexDirection: 'column'
+                    }}>
+                        <p>現在、実績動画を準備中です</p>
+                        <p style={{ fontSize: '0.9rem', opacity: 0.7, marginTop: '10px' }}>自動見積もり作成アプリ / 社内Wiki検索Bot / 日報自動生成ツール などのデモを公開予定</p>
+                    </div>
+                </div>
             </section>
 
             <section className="detail-section">

@@ -2,59 +2,130 @@ import { Helmet } from 'react-helmet-async'
 
 export default function SNSPage() {
     return (
-        <div className="detail-page container">
+        <div className="detail-page">
             <Helmet>
-                <title>SNSマーケティング | 秒で仕事を終わらせる | スキルクラフト</title>
-                <meta name="description" content="スキルクラフトのSNSマーケティング。AI×SNSで集客を自動化し、秒で仕事を終わらせる仕組みを構築します。" />
-                <meta name="keywords" content="SNSマーケティング,SNS運用,AIコンサルティング,Instagram運用,YouTube運用,TikTok運用,Skill Kraft,SkillKraft,スキルクラフト" />
-                <meta property="og:title" content="SNS×AIコンサルティング | 株式会社Skill Kraft" />
-                <meta property="og:description" content="AIを活用した効率的なSNS運用で、フォロワー数ではなく「利益」を最大化します。Instagram、YouTube、TikTokに対応。全額返金保証あり。" />
-                <meta property="og:url" content="https://skillkraft.xyz/sns" />
-                <meta property="og:type" content="website" />
-                <link rel="canonical" href="https://skillkraft.xyz/sns" />
+                <title>SNSマーケティング | 売上に繋がる本質的な運用 | スキルクラフト</title>
+                <meta name="description" content="フォロワー数より利益を重視する、スキルクラフトのSNSマーケティング。AI分析と戦略的な設計で、確実に成果を出します。" />
             </Helmet>
-            <div className="detail-hero">
-                <h1 className="detail-title">SNSマーケティング × AI Consulting</h1>
-                <p className="detail-subtitle">AI活用型・売上特化SNS運用 | スキルクラフト</p>
-            </div>
 
-            <section className="detail-section">
-                <img src="/images/sns.png" alt="SNS × AI Analysis" className="detail-image" />
-                <h2 className="detail-heading">SNSマーケティングでフォロワー数 ≠ 売上</h2>
-                <p>
-                    「フォロワーが増えても売上が上がらなければ意味がない」<br />
-                    スキルクラフトは単なる「バズ」を目的とせず、最終的な<strong>「利益」</strong>を生み出すSNSマーケティング設計を徹底します。<br />
-                    コンセプト設計から商品導入、販売動線まで一貫してコンサルティングを行います。
-                </p>
+            {/* LP Hero */}
+            <header className="hero" style={{ minHeight: '60vh', background: 'linear-gradient(135deg, #003366 0%, #001a33 100%)', color: 'white', position: 'relative', overflow: 'hidden' }}>
+                {/* SNS Icon Background */}
+                <div className="sns-hero-pattern"></div>
+                <div className="sns-floating-icons">
+                    <div className="sns-icon-block">Instagram</div>
+                    <div className="sns-icon-block">TikTok</div>
+                    <div className="sns-icon-block">X</div>
+                    <div className="sns-icon-block">YouTube</div>
+                    <div className="sns-icon-block">Line</div>
+                </div>
+
+                <div className="container text-center" style={{ position: 'relative', zIndex: 1 }}>
+                    <h1 className="hero-title" style={{ color: 'white', marginBottom: '20px' }}>
+                        SNS運用で、<br />
+                        <span style={{ color: '#c0a062' }}>「売上」</span>に繋がっていますか？
+                    </h1>
+                    <p className="hero-subtitle" style={{ color: '#e0e0e0', fontSize: '1.1rem' }}>
+                        フォロワー数だけで満足しない。<br />
+                        ビジネスの成長に直結する、本質的なSNSマーケティング。
+                    </p>
+                </div>
+            </header>
+
+            {/* Pain Points */}
+            <section className="section">
+                <div className="container">
+                    <h2 className="section-title">こんなお悩みありませんか？</h2>
+                    <div className="features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', width: '100%', marginBottom: '50px' }}>
+                        <div className="highlight-box text-center">
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '15px' }}>フォロワーは増えたが...</h3>
+                            <p>「いいね」はつくけれど、商品購入やお問い合わせに繋がらない。</p>
+                        </div>
+                        <div className="highlight-box text-center">
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '15px' }}>投稿作成が負担...</h3>
+                            <p>毎日のネタ探しや画像作成に時間がかかり、本業を圧迫している。</p>
+                        </div>
+                        <div className="highlight-box text-center">
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '15px' }}>戦略がわからない...</h3>
+                            <p>とりあえず流行りの音源を使っているが、自社のターゲットに届いているか不安。</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section className="detail-section highlight-box">
-                <h2 className="detail-heading text-red">【全額返金保証】</h2>
-                <p className="strong-text">
-                    もしバズらなかったら、全額返金いたします。<br />
-                    絶対にバズらせる自信があるからこそできる、リスクゼロの提案です。
-                </p>
+            {/* Solution */}
+            <section className="section bg-gray">
+                <div className="container">
+                    <h2 className="section-title">Skill Kraftの解決策</h2>
+                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                        <div style={{ background: 'white', padding: '40px', borderRadius: '10px', boxShadow: 'var(--shadow-card)', marginBottom: '30px' }}>
+                            <h3 style={{ color: 'var(--color-primary)', marginBottom: '20px', fontSize: '1.5rem', borderBottom: '2px solid var(--color-accent)', display: 'inline-block' }}>Benefit 01</h3>
+                            <h4 style={{ fontSize: '1.3rem', marginBottom: '15px' }}>AI × データ分析による「勝てる」戦略</h4>
+                            <p>感覚的な運用は行いません。AIを活用して競合分析、トレンド分析を徹底的に行い、最短距離で成果が出るロードマップを設計します。</p>
+                        </div>
+                        <div style={{ background: 'white', padding: '40px', borderRadius: '10px', boxShadow: 'var(--shadow-card)', marginBottom: '30px' }}>
+                            <h3 style={{ color: 'var(--color-primary)', marginBottom: '20px', fontSize: '1.5rem', borderBottom: '2px solid var(--color-accent)', display: 'inline-block' }}>Benefit 02</h3>
+                            <h4 style={{ fontSize: '1.3rem', marginBottom: '15px' }}>「集客」から「販売」までの導線設計</h4>
+                            <p>SNSはあくまで入り口です。そこからどうやって公式LINEやLPへ誘導し、成約させるか。マーケティング全体を俯瞰した設計を行います。</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section className="detail-section">
-                <h2 className="detail-heading">圧倒的な実績</h2>
-                <ul className="stats-list">
-                    <li>Instagram リーチ数：<strong>2000万</strong>達成</li>
-                    <li>Instagram フォロワー増：1ヶ月で<strong>2万人</strong></li>
-                    <li>YouTube 登録者増：3ヶ月で<strong>3万人</strong></li>
-                </ul>
-                <p className="mt-4">
-                    法人・個人の枠を超え、確実に数字を作るノウハウを提供します。
-                </p>
+            {/* Guarantee */}
+            <section className="section">
+                <div className="container text-center">
+                    <div style={{ border: '3px solid var(--color-primary)', padding: '50px', borderRadius: '10px', maxWidth: '900px', margin: '0 auto', background: '#fcfcfc' }}>
+                        <h2 className="section-title" style={{ marginBottom: '30px', color: 'var(--color-primary)' }}>自信があるからできる<br />【全額返金保証】</h2>
+                        <p style={{ fontSize: '1.1rem', lineHeight: '2' }}>
+                            もし、定めたKPI（目標数値）を達成できなかった場合、<br />
+                            いただいた費用は<strong className="text-red">全額返金</strong>いたします。<br />
+                            <br />
+                            「成果が出なくても費用はかかる」というリスクを、<br />
+                            お客様に負わせることはありません。
+                        </p>
+                    </div>
+                </div>
             </section>
 
-            <div className="cta-section">
-                <p className="mb-4">ご相談・資料請求は下記よりお気軽にどうぞ</p>
-                <a href="https://docs.google.com/forms/d/1_94L8NqWVh4SZxVzKXt2Yh4dsBaS6ZBAqSJ9lvoYfhk/viewform" target="_blank" rel="noopener noreferrer" className="contact-button-premium">
-                    お問い合わせフォームへ進む
-                </a>
-                <p className="contact-note">※ Googleフォームへ移動します</p>
-            </div>
+            {/* Achievements */}
+            <section className="section bg-gray">
+                <div className="container">
+                    <h2 className="section-title">実績紹介</h2>
+                    <p className="text-center mb-8">※ 今後、実際の事例を詳しく公開していく予定です。</p>
+                    <ul className="stats-list" style={{ listStyle: 'none', maxWidth: '600px', margin: '0 auto' }}>
+                        <li style={{ background: 'white', padding: '20px', marginBottom: '20px', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span>Instagram リーチ数</span>
+                            <strong style={{ fontSize: '1.5rem', color: 'var(--color-primary)' }}>2,000万 達成</strong>
+                        </li>
+                        <li style={{ background: 'white', padding: '20px', marginBottom: '20px', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span>1ヶ月でのフォロワー増</span>
+                            <strong style={{ fontSize: '1.5rem', color: 'var(--color-primary)' }}>+20,000人</strong>
+                        </li>
+                        <li style={{ background: 'white', padding: '20px', marginBottom: '20px', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span>YouTube 登録者増(3ヶ月)</span>
+                            <strong style={{ fontSize: '1.5rem', color: 'var(--color-primary)' }}>+30,000人</strong>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="section">
+                <div className="container text-center">
+                    <h2 className="section-title">お問い合わせ</h2>
+                    <p className="mb-8">
+                        まずは現状の課題をお聞かせください。<br />
+                        最適なプランをご提案させていただきます。
+                    </p>
+                    <a href="https://docs.google.com/forms/d/1_94L8NqWVh4SZxVzKXt2Yh4dsBaS6ZBAqSJ9lvoYfhk/viewform" target="_blank" rel="noopener noreferrer" className="contact-button-premium">
+                        無料相談はこちら
+                    </a>
+                    <p className="contact-note mt-4" style={{ fontSize: '0.8rem', color: '#888', marginTop: '10px' }}>
+                        ※ Googleフォームへ移動します
+                    </p>
+                </div>
+            </section>
         </div>
     )
 }

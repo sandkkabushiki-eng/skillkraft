@@ -1,70 +1,77 @@
-/* Reset App.css */
+/* Reset App.css - Professional Theme Override */
 .service-card {
-  background: rgba(26, 26, 46, 0.8);
-  /* Glass dark */
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  /* Neon border */
-  border-radius: 16px;
-  padding: 40px 30px;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* Thin modern border */
+  border-radius: 0;
+  /* No rounded corners */
+  padding: 70px 30px 40px;
+  /* Increased top padding to avoid badge overlap */
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  /* Smooth transition */
   position: relative;
   overflow: hidden;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 4px 4px 0px rgba(0, 0, 0, 0.1);
+  /* Subtle glow + Solid shadow */
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
-  /* Neon glow */
-  background: rgba(26, 26, 46, 1);
-  border-color: var(--color-secondary);
+  /* Floating effect */
+  box-shadow: 0 12px 20px rgba(238, 64, 54, 0.15), 8px 8px 0px rgba(0, 0, 0, 0.1);
+  /* Red glow + Deeper solid shadow */
+  border: 1px solid var(--color-primary);
 }
 
 .card-title {
-  color: #fff;
-  border-bottom: 3px solid var(--color-secondary);
-  font-size: 1.8rem;
+  color: var(--color-primary);
+  font-family: var(--font-pixel);
+  /* Pixel font */
+  font-size: 1.5rem;
   margin-bottom: 20px;
   padding-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  /* Thin line */
   display: inline-block;
-  font-weight: bold;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .card-title {
+  border-bottom-color: var(--color-primary);
+  letter-spacing: 0.05em;
 }
 
 .card-desc {
-  color: #ddd;
+  color: #555;
   font-size: 1rem;
-  line-height: returning;
+  line-height: 1.8;
 }
 
 .card-badge {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  color: var(--color-accent);
-  margin-bottom: 20px;
-  writing-mode: vertical-rl;
+  font-family: var(--font-pixel);
+  /* Pixel font */
+  font-size: 0.85rem;
+  color: #fff;
+  /* White text */
+  background: linear-gradient(135deg, var(--color-primary), #d32f2f);
+  /* Gradient like button */
+  padding: 6px 16px;
+  border-radius: 0;
+  /* Square badge */
+  border: none;
   position: absolute;
   top: 20px;
   right: 20px;
-  letter-spacing: 0.2rem;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(238, 64, 54, 0.3), 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-.card-title {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  border-bottom: 3px solid var(--color-highlight);
-  /* Yellow accent */
-  padding-bottom: 15px;
-  display: inline-block;
-  color: var(--color-text);
-  font-weight: bold;
-}
-
-.card-desc {
-  font-size: 1rem;
-  color: #555;
-  line-height: returning;
+.service-card:hover .card-badge {
+  background: linear-gradient(135deg, #ff5f55, #e53935);
+  box-shadow: 0 4px 8px rgba(238, 64, 54, 0.4), 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
