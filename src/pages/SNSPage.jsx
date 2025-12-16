@@ -1,11 +1,54 @@
 import { Helmet } from 'react-helmet-async'
 
 export default function SNSPage() {
+    const baseUrl = 'https://skillkraft.xyz'
+    const pageUrl = `${baseUrl}/sns`
+    const title = 'SNSマーケティング | 売上に繋がる本質的な運用 | スキルクラフト'
+    const description =
+        'フォロワー数より利益を重視する、スキルクラフトのSNSマーケティング。AI分析と戦略設計で、売上に繋がる運用へ改善します。'
+    const keywords =
+        'スキルクラフト,Skill Kraft,SNSマーケティング,SNS運用,Instagram運用,TikTok運用,YouTube運用,X運用,集客改善,売上改善,AI分析'
+
+    const serviceLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'SNSマーケティング',
+        serviceType: 'SNSマーケティング',
+        url: pageUrl,
+        description,
+        provider: {
+            '@type': 'Organization',
+            name: '株式会社Skill Kraft',
+            url: baseUrl,
+            logo: `${baseUrl}/logo.png`,
+        },
+        areaServed: 'JP',
+    }
+
     return (
         <div className="detail-page">
             <Helmet>
-                <title>SNSマーケティング | 売上に繋がる本質的な運用 | スキルクラフト</title>
-                <meta name="description" content="フォロワー数より利益を重視する、スキルクラフトのSNSマーケティング。AI分析と戦略的な設計で、確実に成果を出します。" />
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <meta name="keywords" content={keywords} />
+                <link rel="canonical" href={pageUrl} />
+
+                {/* OGP */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={pageUrl} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={`${baseUrl}/logo.png`} />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content={pageUrl} />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={`${baseUrl}/logo.png`} />
+
+                {/* JSON-LD */}
+                <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
             </Helmet>
 
             {/* LP Hero */}

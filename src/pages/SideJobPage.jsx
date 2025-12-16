@@ -2,17 +2,54 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 
 export default function SideJobPage() {
+    const baseUrl = 'https://skillkraft.xyz'
+    const pageUrl = `${baseUrl}/side-job`
+    const title = 'AIサボ（AI副業・副業支援）| スキルクラフト'
+    const description =
+        'AIサボは、AI学習〜案件獲得〜収益化までを一気通貫で支援する学習プラットフォーム。AI副業で月100万円を目指すためのロードマップを提供します。'
+    const keywords =
+        'スキルクラフト,Skill Kraft,AIサボ,AI副業,副業支援,副業コンサル,AI学習,案件獲得,収益化,月100万円'
+
+    const serviceLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'AIサボ（AI副業・副業支援）',
+        serviceType: 'AI副業支援 / AI学習プラットフォーム',
+        url: pageUrl,
+        description,
+        provider: {
+            '@type': 'Organization',
+            name: '株式会社Skill Kraft',
+            url: baseUrl,
+            logo: `${baseUrl}/logo.png`,
+        },
+        areaServed: 'JP',
+    }
+
     return (
         <div className="detail-page">
             <Helmet>
-                <title>AIサボ | AI学習プラットフォーム | スキルクラフト</title>
-                <meta name="description" content="AIの本質的な学習ができるプラットフォーム「AIサボ」。副業から独立まで、実践的なAIスキル習得をサポートします。" />
-                <meta name="keywords" content="AIサボ,AI学習,AI副業,副業支援,スキルクラフト,Skill Kraft" />
-                <meta property="og:title" content="AIサボ | AI学習プラットフォーム" />
-                <meta property="og:description" content="AIの本質的な学習ができるプラットフォーム「AIサボ」。副業から独立まで、実践的なAIスキル習得をサポートします。" />
-                <meta property="og:url" content="https://skillkraft.xyz/side-job" />
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <meta name="keywords" content={keywords} />
+                <link rel="canonical" href={pageUrl} />
+
+                {/* OGP */}
                 <meta property="og:type" content="website" />
-                <link rel="canonical" href="https://skillkraft.xyz/side-job" />
+                <meta property="og:url" content={pageUrl} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={`${baseUrl}/logo.png`} />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content={pageUrl} />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={`${baseUrl}/logo.png`} />
+
+                {/* JSON-LD */}
+                <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
             </Helmet>
 
             {/* LP Hero */}
@@ -74,6 +111,7 @@ export default function SideJobPage() {
                             <h3 style={{ color: 'var(--color-primary)', marginBottom: '20px', fontSize: '1.5rem', borderBottom: '2px solid var(--color-accent)', display: 'inline-block' }}>Benefit 02</h3>
                             <h4 style={{ fontSize: '1.3rem', marginBottom: '15px' }}>収益化するまで全力サポート</h4>
                             <p>「教えて終わり」ではありません。実際に収益が発生するまで、徹底的にサポートし続けます。コンサル生の中には、開始初月で150万円の収益化に成功した事例もございます。</p>
+                            <p style={{ marginTop: '10px', fontSize: '0.9rem', color: '#666' }}>※ 「月100万円」などの金額は目標例であり、成果を保証するものではありません。</p>
                         </div>
                         <div style={{ background: 'white', padding: '40px', borderRadius: '10px', boxShadow: 'var(--shadow-card)', marginBottom: '30px' }}>
                             <h3 style={{ color: 'var(--color-primary)', marginBottom: '20px', fontSize: '1.5rem', borderBottom: '2px solid var(--color-accent)', display: 'inline-block' }}>Benefit 03</h3>

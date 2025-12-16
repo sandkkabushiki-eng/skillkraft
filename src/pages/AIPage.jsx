@@ -2,17 +2,54 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 
 export default function AIPage() {
+    const baseUrl = 'https://skillkraft.xyz'
+    const pageUrl = `${baseUrl}/ai`
+    const title = 'AI導入支援（業務改善アプリ開発）| スキルクラフト'
+    const description =
+        'スキルクラフトのAI導入支援（AI DX）。御社専用の業務改善アプリ開発と自動化で、現場で本当に使えるAIを実装します。'
+    const keywords =
+        'スキルクラフト,Skill Kraft,AI導入,AI導入支援,AI DX,業務効率化,業務改善,AIアプリ開発,自動化,RPA,社内ツール開発,業務改善アプリ'
+
+    const serviceLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'AI導入支援（AI DX）',
+        serviceType: 'AI導入支援 / 業務改善アプリ開発',
+        url: pageUrl,
+        description,
+        provider: {
+            '@type': 'Organization',
+            name: '株式会社Skill Kraft',
+            url: baseUrl,
+            logo: `${baseUrl}/logo.png`,
+        },
+        areaServed: 'JP',
+    }
+
     return (
         <div className="detail-page">
             <Helmet>
-                <title>AI導入支援 | 秒で仕事を終わらせる | スキルクラフト</title>
-                <meta name="description" content="スキルクラフトのAI導入支援。業務フローをAIで最適化し、秒で仕事を終わらせる生産性を実現します。" />
-                <meta name="keywords" content="AI導入,AI副業,業務効率化,AIアプリ開発,オートメーション,Skill Kraft,SkillKraft,スキルクラフト" />
-                <meta property="og:title" content="AI導入支援 | 株式会社Skill Kraft" />
-                <meta property="og:description" content="業務効率化のためのAI導入支援。自社専用アプリ開発やオペレーションの自動化で、20人分の業務を5人で回す体制を構築します。" />
-                <meta property="og:url" content="https://skillkraft.xyz/ai" />
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <meta name="keywords" content={keywords} />
+                <link rel="canonical" href={pageUrl} />
+
+                {/* OGP */}
                 <meta property="og:type" content="website" />
-                <link rel="canonical" href="https://skillkraft.xyz/ai" />
+                <meta property="og:url" content={pageUrl} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={`${baseUrl}/logo.png`} />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content={pageUrl} />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={`${baseUrl}/logo.png`} />
+
+                {/* JSON-LD */}
+                <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
             </Helmet>
 
             {/* LP Hero */}

@@ -5,12 +5,54 @@ import { Helmet } from 'react-helmet-async'
 import '../components/SpaceBackground.css'
 
 export default function Home() {
+    const baseUrl = 'https://skillkraft.xyz'
+    const pageUrl = `${baseUrl}/`
+    const title = 'スキルクラフト | SNSマーケティング・AI導入支援・副業支援'
+    const description =
+        'スキルクラフト（株式会社Skill Kraft）の公式サイト。SNSマーケティング、AI導入支援（業務改善アプリ開発）、副業支援（AIサボ）で、個人と企業の成果にコミットします。'
+    const keywords =
+        'スキルクラフト,Skill Kraft,SNSマーケティング,SNS運用,AI導入,AI活用,AIアプリ開発,業務効率化,DX,副業支援,AI副業,月100万円'
+
+    const organizationLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: '株式会社Skill Kraft',
+        url: baseUrl,
+        logo: `${baseUrl}/logo.png`,
+    }
+
+    const websiteLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'スキルクラフト | 株式会社Skill Kraft',
+        url: baseUrl,
+    }
+
     return (
         <div className="home-container">
             <Helmet>
-                <title>スキルクラフト | 秒で仕事を終わらせる | AI導入支援</title>
-                <meta name="description" content="スキルクラフトは、AI活用とSNSマーケティングでビジネスの課題を解決するプロフェッショナルチームです。" />
-                <meta name="keywords" content="AI導入,AI活用,スキルクラフト,Skill Kraft,SNSマーケティング,DX,業務効率化" />
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <meta name="keywords" content={keywords} />
+                <link rel="canonical" href={pageUrl} />
+
+                {/* OGP */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={pageUrl} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={`${baseUrl}/logo.png`} />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content={pageUrl} />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={`${baseUrl}/logo.png`} />
+
+                {/* JSON-LD */}
+                <script type="application/ld+json">{JSON.stringify(organizationLd)}</script>
+                <script type="application/ld+json">{JSON.stringify(websiteLd)}</script>
             </Helmet>
 
             {/* Hero Section */}
@@ -63,6 +105,10 @@ export default function Home() {
                             />
                         </Link>
                     </div>
+                    <p style={{ maxWidth: '900px', margin: '30px auto 0', color: '#555', lineHeight: '2' }}>
+                        スキルクラフトは<strong>SNSマーケティング</strong>、<strong>AI導入支援（業務改善アプリ開発）</strong>、<strong>副業支援（AIサボ）</strong>の3事業で、
+                        「使いやすさ」と「成果」にこだわって伴走します。副業支援では、<strong>月100万円を目指す</strong>ロードマップ設計も行っています（※目標であり成果を保証するものではありません）。
+                    </p>
                 </div>
             </section>
 
