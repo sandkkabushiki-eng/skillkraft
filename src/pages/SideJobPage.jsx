@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 
 export default function SideJobPage() {
     return (
-        <div className="detail-page container">
+        <div className="detail-page">
             <Helmet>
                 <title>AIサボ | AI学習プラットフォーム | スキルクラフト</title>
                 <meta name="description" content="AIの本質的な学習ができるプラットフォーム「AIサボ」。副業から独立まで、実践的なAIスキル習得をサポートします。" />
@@ -13,7 +14,9 @@ export default function SideJobPage() {
                 <meta property="og:type" content="website" />
                 <link rel="canonical" href="https://skillkraft.xyz/side-job" />
             </Helmet>
-            <div className="detail-hero" style={{ minHeight: '60vh', background: 'linear-gradient(135deg, #003366 0%, #001a33 100%)', color: 'white', position: 'relative', overflow: 'hidden' }}>
+
+            {/* LP Hero */}
+            <header className="hero" style={{ minHeight: '60vh', background: 'linear-gradient(135deg, #003366 0%, #001a33 100%)', color: 'white', position: 'relative', overflow: 'hidden' }}>
                 {/* Learning Background */}
                 <div className="sns-hero-pattern"></div>
                 <div className="sns-floating-icons">
@@ -24,46 +27,98 @@ export default function SideJobPage() {
                     <div className="sns-icon-block">Earn</div>
                 </div>
 
-                <div className="container text-center" style={{ position: 'relative', zIndex: 1, paddingTop: '100px' }}>
-                    <h1 className="detail-title" style={{ color: 'white', marginBottom: '20px', fontSize: '3rem' }}>AIサボ | AI Learning Platform</h1>
-                    <p className="detail-subtitle" style={{ color: '#e0e0e0', fontSize: '1.2rem' }}>AI副業 × 学習プラットフォーム</p>
+                <div className="container text-center" style={{ position: 'relative', zIndex: 1 }}>
+                    <h1 className="hero-title" style={{ color: 'white', marginBottom: '20px' }}>
+                        AI時代に取り残されない。<br />
+                        <span style={{ color: '#c0a062' }}>「収益化」</span>まで学べる。
+                    </h1>
+                    <p className="hero-subtitle" style={{ color: '#e0e0e0', fontSize: '1.1rem' }}>
+                        ただツールを使うだけでは不十分です。<br />
+                        AIの本質的な理解から、実際の案件獲得・収益化まで一気通貫でサポート。
+                    </p>
                 </div>
-            </div>
+            </header>
 
-            <section className="detail-section">
-                <img src="/images/sidejob.png" alt="AI Sabo Platform" className="detail-image" />
-                <h2 className="detail-heading">AI時代に取り残されないための、実践的学習プラットフォーム</h2>
-                <p>
-                    急速に進化するAI社会において、ただツールを使うだけでは不十分です。<br />
-                    AIサボは、AIの本質的な理解から、実際の案件獲得・収益化までを一気通貫でサポート。<br />
-                    未経験からでも、市場価値の高いAI人材へと成長できます。
-                </p>
+            {/* Pain Points */}
+            <section className="section">
+                <div className="container">
+                    <h2 className="section-title">こんなお悩みありませんか？</h2>
+                    <div className="features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', width: '100%', marginBottom: '50px' }}>
+                        <div className="highlight-box text-center">
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '15px' }}>AIスキルを学びたいが...</h3>
+                            <p>ChatGPTの使い方はわかるが、実際に仕事や副業にどう活かせばいいかわからない。</p>
+                        </div>
+                        <div className="highlight-box text-center">
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '15px' }}>収益化までできない...</h3>
+                            <p>スキルは学んだが、実際に案件を獲得して収益化するまでの道のりがわからない。</p>
+                        </div>
+                        <div className="highlight-box text-center">
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '15px' }}>一人では続かない...</h3>
+                            <p>独学で始めたが、モチベーションが続かず、結局何も身につかなかった。</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section className="detail-section highlight-box">
-                <h2 className="detail-heading">初月収益150万円達成</h2>
-                <p className="strong-text">
-                    コンサル生の中には、開始初月で150万円の収益化に成功した事例もございます。<br />
-                    未経験からでも結果を出せる再現性の高いノウハウを提供します。
-                </p>
-                <p style={{ marginTop: '15px', fontSize: '0.9rem', color: '#666' }}>※ 詳細な収益実績グラフ等は準備中です。</p>
+            {/* Solution */}
+            <section className="section bg-gray">
+                <div className="container">
+                    <h2 className="section-title">AIサボの解決策</h2>
+                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                        <div style={{ background: 'white', padding: '40px', borderRadius: '10px', boxShadow: 'var(--shadow-card)', marginBottom: '30px' }}>
+                            <h3 style={{ color: 'var(--color-primary)', marginBottom: '20px', fontSize: '1.5rem', borderBottom: '2px solid var(--color-accent)', display: 'inline-block' }}>Benefit 01</h3>
+                            <h4 style={{ fontSize: '1.3rem', marginBottom: '15px' }}>本質的なAIスキルの習得</h4>
+                            <p>ただツールを使うだけではなく、AIの仕組みを理解し、実際のビジネス課題を解決できるスキルを身につけます。未経験からでも、市場価値の高いAI人材へと成長できます。</p>
+                        </div>
+                        <div style={{ background: 'white', padding: '40px', borderRadius: '10px', boxShadow: 'var(--shadow-card)', marginBottom: '30px' }}>
+                            <h3 style={{ color: 'var(--color-primary)', marginBottom: '20px', fontSize: '1.5rem', borderBottom: '2px solid var(--color-accent)', display: 'inline-block' }}>Benefit 02</h3>
+                            <h4 style={{ fontSize: '1.3rem', marginBottom: '15px' }}>収益化するまで全力サポート</h4>
+                            <p>「教えて終わり」ではありません。実際に収益が発生するまで、徹底的にサポートし続けます。コンサル生の中には、開始初月で150万円の収益化に成功した事例もございます。</p>
+                        </div>
+                        <div style={{ background: 'white', padding: '40px', borderRadius: '10px', boxShadow: 'var(--shadow-card)', marginBottom: '30px' }}>
+                            <h3 style={{ color: 'var(--color-primary)', marginBottom: '20px', fontSize: '1.5rem', borderBottom: '2px solid var(--color-accent)', display: 'inline-block' }}>Benefit 03</h3>
+                            <h4 style={{ fontSize: '1.3rem', marginBottom: '15px' }}>再現性の高いノウハウ</h4>
+                            <p>未経験からでも結果を出せる、再現性の高いノウハウを提供します。個人の力を資産に変え、AI時代に取り残されないスキルを身につけます。</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section className="detail-section">
-                <h2 className="detail-heading">収益化するまで全力サポート</h2>
-                <p>
-                    「教えて終わり」ではありません。<br />
-                    実際に収益が発生するまで、徹底的にサポートし続けます。
-                </p>
+            {/* Achievements */}
+            <section className="section bg-gray">
+                <div className="container">
+                    <h2 className="section-title">実績紹介</h2>
+                    <p className="text-center mb-8">※ 詳細な収益実績グラフ等は準備中です。</p>
+                    <ul className="stats-list" style={{ listStyle: 'none', maxWidth: '600px', margin: '0 auto' }}>
+                        <li style={{ background: 'white', padding: '20px', marginBottom: '20px', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span>初月最高収益</span>
+                            <strong style={{ fontSize: '1.5rem', color: 'var(--color-primary)' }}>150万円</strong>
+                        </li>
+                        <li style={{ background: 'white', padding: '20px', marginBottom: '20px', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span>受講生数</span>
+                            <strong style={{ fontSize: '1.5rem', color: 'var(--color-primary)' }}>100+ 名</strong>
+                        </li>
+                        <li style={{ background: 'white', padding: '20px', marginBottom: '20px', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span>収益化達成率</span>
+                            <strong style={{ fontSize: '1.5rem', color: 'var(--color-primary)' }}>80%以上</strong>
+                        </li>
+                    </ul>
+                </div>
             </section>
 
-            <div className="cta-section">
-                <p className="mb-4">まずは無料相談からスタート</p>
-                <a href="https://docs.google.com/forms/d/1_94L8NqWVh4SZxVzKXt2Yh4dsBaS6ZBAqSJ9lvoYfhk/viewform" target="_blank" rel="noopener noreferrer" className="contact-button-premium">
-                    副業相談・お問い合わせへ進む
-                </a>
-                <p className="contact-note">※ Googleフォームへ移動します</p>
-            </div>
+            {/* CTA */}
+            <section className="section">
+                <div className="container text-center">
+                    <h2 className="section-title">お問い合わせ</h2>
+                    <p className="mb-8">
+                        まずは無料相談からスタート。<br />
+                        AI副業・学習についてお気軽にご相談ください。
+                    </p>
+                    <Link to="/contact" className="contact-button-premium">
+                        お問い合わせフォームへ
+                    </Link>
+                </div>
+            </section>
         </div>
     )
 }
