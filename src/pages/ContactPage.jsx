@@ -1,6 +1,5 @@
 import ContactForm from '../components/ContactForm'
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
 
 export default function ContactPage() {
     const baseUrl = 'https://skillkraft.xyz'
@@ -49,27 +48,21 @@ export default function ContactPage() {
                 <meta name="description" content={description} />
                 <meta name="keywords" content={keywords} />
                 <link rel="canonical" href={pageUrl} />
-
-                {/* OGP */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={pageUrl} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={`${baseUrl}/logo.png`} />
-
-                {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:url" content={pageUrl} />
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={description} />
                 <meta name="twitter:image" content={`${baseUrl}/logo.png`} />
-
-                {/* JSON-LD */}
                 <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
             </Helmet>
-            
+
             <div className="contact-page-layout">
-                {/* Left Column: Information & FAQ */}
+                {/* Left Column */}
                 <div className="contact-info-col">
                     <div className="info-box">
                         <h2 className="info-title">Consultation</h2>
@@ -78,7 +71,7 @@ export default function ContactPage() {
                             Skill Kraftのサービスにご興味をお持ちいただきありがとうございます。<br />
                             AI導入、SNSマーケティング、業務効率化など、ビジネスの課題解決についてお気軽にご相談ください。
                         </p>
-                        
+
                         <div className="info-points">
                             <h4>こんな方におすすめ</h4>
                             <ul>
@@ -106,11 +99,11 @@ export default function ContactPage() {
                     </div>
                 </div>
 
-                {/* Right Column: Contact Form */}
+                {/* Right Column */}
                 <div className="contact-form-col">
                     <div className="contact-section-box">
                         <h2 className="section-title">Contact Form</h2>
-                        <p className="contact-text mb-8 text-center" style={{ fontSize: '0.9rem' }}>
+                        <p className="text-center mb-8" style={{ fontSize: '0.9rem', color: 'var(--color-text-light)' }}>
                             下記フォームに必要事項をご入力ください。<br />
                             <span className="required">*</span> は必須項目です。
                         </p>
@@ -121,4 +114,3 @@ export default function ContactPage() {
         </div>
     )
 }
-

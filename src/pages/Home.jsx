@@ -1,7 +1,7 @@
 import ServiceCard from '../components/ServiceCard'
-import ContactForm from '../components/ContactForm'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 import '../components/SpaceBackground.css'
 
 export default function Home() {
@@ -28,6 +28,11 @@ export default function Home() {
         url: baseUrl,
     }
 
+    const servicesRef = useScrollAnimation()
+    const statsRef = useScrollAnimation()
+    const ctaRef = useScrollAnimation()
+    const companyRef = useScrollAnimation()
+
     return (
         <div className="home-container">
             <Helmet>
@@ -35,22 +40,16 @@ export default function Home() {
                 <meta name="description" content={description} />
                 <meta name="keywords" content={keywords} />
                 <link rel="canonical" href={pageUrl} />
-
-                {/* OGP */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={pageUrl} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={`${baseUrl}/logo.png`} />
-
-                {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:url" content={pageUrl} />
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={description} />
                 <meta name="twitter:image" content={`${baseUrl}/logo.png`} />
-
-                {/* JSON-LD */}
                 <script type="application/ld+json">{JSON.stringify(organizationLd)}</script>
                 <script type="application/ld+json">{JSON.stringify(websiteLd)}</script>
             </Helmet>
@@ -60,7 +59,7 @@ export default function Home() {
                 <div className="hero-bg-3d">
                     <div className="hero-grid-plane"></div>
                 </div>
-                
+
                 <div className="hero-content">
                     <img src="/logo.png" alt="Skill Kraft Logo" className="hero-logo" />
                     <h1 className="hero-title">
@@ -72,17 +71,49 @@ export default function Home() {
                         使いやすさに徹底的にこだわり、<br />
                         あなたの会社のポテンシャルを最大限に解放します。
                     </p>
-                    <a href="#services" className="contact-button-premium">
-                        サービスを見る
-                    </a>
+                    <div className="hero-buttons">
+                        <a href="#services" className="btn-primary">
+                            サービスを見る
+                        </a>
+                        <Link to="/contact" className="btn-outline">
+                            無料相談はこちら
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Stats Section */}
+            <section className="section" ref={statsRef}>
+                <div className="container">
+                    <div className="stats-row fade-in-up">
+                        <div className="stat-item">
+                            <div className="stat-number">2,000万</div>
+                            <div className="stat-label">SNSリーチ数</div>
+                        </div>
+                        <div className="stat-item">
+                            <div className="stat-number">75%</div>
+                            <div className="stat-label">業務効率化率</div>
+                        </div>
+                        <div className="stat-item">
+                            <div className="stat-number">100+</div>
+                            <div className="stat-label">支援実績</div>
+                        </div>
+                        <div className="stat-item">
+                            <div className="stat-number">150万</div>
+                            <div className="stat-label">初月最高収益</div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             {/* Services Section */}
-            <section id="services" className="section bg-gray">
+            <section id="services" className="section bg-gray" ref={servicesRef}>
                 <div className="container">
-                    <h2 className="section-title">Service</h2>
-                    <div className="services-grid">
+                    <h2 className="section-title fade-in-up">Service</h2>
+                    <p className="section-subtitle fade-in-up">
+                        3つの事業で、「使いやすさ」と「成果」にこだわって伴走します。
+                    </p>
+                    <div className="services-grid stagger-children">
                         <Link to="/sns">
                             <ServiceCard
                                 title="SNS × AI Marketing"
@@ -105,32 +136,23 @@ export default function Home() {
                             />
                         </Link>
                     </div>
-                    <p style={{ maxWidth: '900px', margin: '30px auto 0', color: '#555', lineHeight: '2' }}>
-                        スキルクラフトは<strong>SNSマーケティング</strong>、<strong>AI導入支援（業務改善アプリ開発）</strong>、<strong>副業支援（AIサボ）</strong>の3事業で、
-                        「使いやすさ」と「成果」にこだわって伴走します。副業支援では、<strong>月100万円を目指す</strong>ロードマップ設計も行っています（※目標であり成果を保証するものではありません）。
+                    <p className="section-subtitle fade-in-up" style={{ marginTop: '40px', marginBottom: 0 }}>
+                        副業支援では、<strong>月100万円を目指す</strong>ロードマップ設計も行っています。<br />
+                        <small style={{ color: '#94a3b8' }}>※目標であり成果を保証するものではありません</small>
                     </p>
                 </div>
             </section>
 
             {/* Contact Section (CTA) */}
-            <section id="contact" className="section" style={{ position: 'relative', overflow: 'hidden' }}>
-                {/* Background Decorations */}
-                <div className="mc-cloud" style={{ top: '15%', left: '5%' }}></div>
-                <div className="mc-cloud" style={{ top: '25%', right: '10%', animationDelay: '2s' }}></div>
-                <div className="mc-grass-floor"></div>
-
-                <div className="container text-center" style={{ position: 'relative', zIndex: 1 }}>
-                    <div className="contact-section-box" style={{ padding: '60px 40px', maxWidth: '800px', margin: '0 auto', position: 'relative', overflow: 'visible' }}>
-                        {/* Decorative Elements */}
-                        <div className="minecraft-decoration mc-char"></div>
-                        <div className="minecraft-decoration mc-block"></div>
-
+            <section className="section" ref={ctaRef}>
+                <div className="container text-center">
+                    <div className="fade-in-up" style={{ maxWidth: '700px', margin: '0 auto' }}>
                         <h2 className="section-title">Contact</h2>
-                        <p className="contact-text mb-8">
-                            スキルクラフトへのお問い合わせ、お見積もりのご依頼は<br />
-                            下記ボタンよりお問い合わせページへお進みください。
+                        <p className="section-subtitle" style={{ marginBottom: '30px' }}>
+                            まずはお気軽にご相談ください。<br />
+                            初回のご相談・お見積もりは無料です。
                         </p>
-                        <Link to="/contact" className="contact-button-premium">
+                        <Link to="/contact" className="btn-primary">
                             お問い合わせフォームへ
                         </Link>
                     </div>
@@ -138,28 +160,41 @@ export default function Home() {
             </section>
 
             {/* Company Section */}
-            <section id="company" className="section bg-gray">
+            <section id="company" className="section bg-gray" ref={companyRef}>
                 <div className="container">
-                    <h2 className="section-title">Company</h2>
-                    <div className="company-info" style={{ maxWidth: '800px', width: '100%' }}>
-                        <dl className="company-list" style={{ display: 'grid', gap: '20px' }}>
-                            <div className="company-item" style={{ display: 'flex', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
-                                <dt style={{ width: '120px', fontWeight: 'bold' }}>会社名</dt>
-                                <dd>(株)Skill Kraft</dd>
-                            </div>
-                            <div className="company-item" style={{ display: 'flex', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
-                                <dt style={{ width: '120px', fontWeight: 'bold' }}>代表者</dt>
-                                <dd>中村 昇継</dd>
-                            </div>
-                            <div className="company-item" style={{ display: 'flex', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
-                                <dt style={{ width: '120px', fontWeight: 'bold' }}>所在地</dt>
-                                <dd>福岡県遠賀郡下二東15-17</dd>
-                            </div>
-                            <div className="company-item" style={{ display: 'flex', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
-                                <dt style={{ width: '120px', fontWeight: 'bold' }}>連絡先</dt>
-                                <dd>sandkkabushiki@gmail.com</dd>
-                            </div>
-                        </dl>
+                    <h2 className="section-title fade-in-up">Company</h2>
+                    <p className="section-subtitle fade-in-up">会社概要</p>
+                    <div className="fade-in-up" style={{ maxWidth: '700px', width: '100%', margin: '0 auto' }}>
+                        <div style={{
+                            background: '#fff',
+                            borderRadius: 'var(--radius-lg)',
+                            padding: '40px',
+                            boxShadow: 'var(--shadow-sm)',
+                            border: '1px solid var(--color-border)',
+                        }}>
+                            <dl style={{ display: 'grid', gap: '20px' }}>
+                                {[
+                                    ['会社名', '(株)Skill Kraft'],
+                                    ['代表者', '中村 昇継'],
+                                    ['所在地', '福岡県遠賀郡下二東15-17'],
+                                    ['連絡先', 'sandkkabushiki@gmail.com'],
+                                ].map(([dt, dd]) => (
+                                    <div key={dt} style={{
+                                        display: 'flex',
+                                        borderBottom: '1px solid var(--color-border)',
+                                        paddingBottom: '16px',
+                                    }}>
+                                        <dt style={{
+                                            width: '120px',
+                                            fontWeight: '700',
+                                            color: 'var(--color-text)',
+                                            flexShrink: 0,
+                                        }}>{dt}</dt>
+                                        <dd style={{ color: 'var(--color-text-light)' }}>{dd}</dd>
+                                    </div>
+                                ))}
+                            </dl>
+                        </div>
                     </div>
                 </div>
             </section>
